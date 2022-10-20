@@ -60,9 +60,9 @@ namespace Back_End.Controllers
             return Ok(productsByCategory);
         }
         [HttpGet("GetProductsByDestacados")]
-        public IActionResult GetProductsByDestacados(int idCategory)
+        public IActionResult GetProductsByDestacados()
         {
-            List<Product> productsDestacados= new List<Product>();
+            List<Product> productsDestacados = new List<Product>();
             List<Product> productstmp = new List<Product>();
             try
             {
