@@ -69,7 +69,7 @@ namespace Back_End.Controllers
                 productstmp = GetProducts();
                 foreach (var product in productstmp)
                 {
-                    if (product.Destacado) productsDestacados.Add(product);
+                    if (product.Destacado == true) productsDestacados.Add(product);
                 }
             }
 
