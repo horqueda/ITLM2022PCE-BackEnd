@@ -1,91 +1,50 @@
 ﻿using Back_End.Models;
 
-namespace Back_End.Repositories
+namespace back_end.repositories
 {
     public class ProductRepository
     {
         public List<Product> GetProducts()
         {
-            List<Product> products = new List<Product>();
-
-            Product product1 = new Product(1, "Producto 1", 3000, false);
-            product1.Description = "Remera basica blanca";
-            product1.category = new Category(1, "Remeras");
+            List<Product> products = new List<product>();
+            
+            Product product1 = new product(1, "producto 1", 1000, false);
+            product1.Description = "remera basica blanca";
+            product1.category = new category(1, "remeras");
+            product1.size = "xs";
             products.Add(product1);
 
-            Product product2 = new Product(2, "Producto 2", 500, true);
-            product2.Description = "Buzo canguro con capucha";
-            product2.category = new Category(2, "Buzos");
+            Product product2 = new product(2, "producto 2", 2000, true);
+            product2.Description = "buzo canguro con capucha";
+            product2.category = new category(2, "buzos");
+            product2.size = "s";
             products.Add(product2);
 
-            Product product3 = new Product(3, "Producto 3", 1000, false);
-            product3.Size = "XXXL";
+            Product product3 = new product(3, "producto 3", 3000, false);
+            product3.Description = "buzo canguro sin capucha";
+            product3.category = new category(3, "buzos");
+            product3.size = "m";
             products.Add(product3);
 
-            Product product4 = new Product(4, "Producto 4", 1000, true);
-            product4.Description = "Buzo canguro con capucha 4 ";
-            product4.category = new Category(2, "Buzos");
+            Product product4 = new product(4, "producto 4", 4000, true);
+            product4.Description = "buzo canguro con capucha 4 ";
+            product4.category = new category(4, "buzos");
+            product4.size = "l";
             products.Add(product4);
 
-            Product product5 = new Product(5, "Producto 5", 1000, false);
-            product5.Description = "Remera basica blanca 5";
-            product5.category = new Category(1, "Remeras");
+            Product product5 = new product(5, "producto 5", 5000, false);
+            product5.Description = "remera basica blanca 5";
+            product5.category = new category(5, "remeras");
+            product5.size = "xl";
             products.Add(product5);
+
+            Product product6 = new product(6, "producto 6", 6000, true);
+            product6.Description = "remera basica negra 6";
+            product6.category = new category(6, "remeras");
+            product6.size = "xxl";
+            products.Add(product6);
 
             return products;
         }
     }
 }
-
-
-
-//using Back_End.Models;
-
-//namespace Back_End.Repositories
-//{
-//    public class ProductRepository
-//    {
-//        public List<Product> GetProducts()
-//        {
-//            List<Product> products = new List<Product>();
-
-//            Product product1 = new Product(1, "Producto 1", 1000, false);
-//            product1.Description = "Remera basica blanca";
-//            product1.category = new Category(1, "Remeras");
-//            product1.Size = "XS";
-//            products.Add(product1);
-
-//            Product product2 = new Product(2, "Producto 2", 2000, true);
-//            product2.Description = "Buzo canguro con capucha";
-//            product2.category = new Category(2, "Buzos");
-//            product2.Size = "S";
-//            products.Add(product2);
-
-//            Product product3 = new Product(3, "Producto 3", 3000, false);
-//            product3.Description = "Buzo canguro Sin capucha";
-//            product3.category = new Category(3, "Buzos");
-//            product3.Size = "M";
-//            products.Add(product3);
-
-//            Product product4 = new Product(4, "Producto 4", 4000, true);
-//            product4.Description = "Buzo canguro con capucha 4 ";
-//            product4.category = new Category(4, "Buzos");
-//            product4.Size = "L";
-//            products.Add(product4);
-
-//            Product product5 = new Product(5, "Producto 5", 5000, false);
-//            product5.Description = "Remera basica blanca 5";
-//            product5.category = new Category(5, "Remeras");
-//            product5.Size = "XL";
-//            products.Add(product5);
-
-//            Product product6 = new Product(6, "Producto 6", 6000, true);
-//            product6.Description = "Remera basica Negra 6";
-//            product6.category = new Category(6, "Remeras");
-//            product6.Size = "XXL";
-//            products.Add(product6);
-
-//            return products;
-//        }
-//    }
-//}
