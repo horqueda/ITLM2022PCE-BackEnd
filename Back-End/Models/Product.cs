@@ -26,6 +26,11 @@
             this.Destacado = destacado;
         }
 
+        public Product()
+        {
+            this.category = new Category();
+        }
+
         public void SetNewPrice(double newPrice)
         {
             if (newPrice < (_originalPrice * 0.90))
