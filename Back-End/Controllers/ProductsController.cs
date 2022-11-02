@@ -1,6 +1,8 @@
 ﻿using Back_End.Models;
 using Microsoft.AspNetCore.Mvc;
 using Back_End.Repositories;
+using System.Security.Cryptography.X509Certificates;
+using back_end.repositories;
 
 namespace Back_End.Controllers
 {
@@ -125,7 +127,7 @@ namespace Back_End.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
+        
         [HttpGet("GetCart")]
         public IActionResult GetCart()
         {
@@ -138,6 +140,25 @@ namespace Back_End.Controllers
 
                 return BadRequest(ex.Message);
             }
+        }
+
+
+        [HttpGet("GetProductsInBanner")]  // Agregar productos con propiedad destacados al Banner
+        public ActionResult GetProductsInBanner()
+        {
+            List<Product> productstmp = new List<Product>();
+            List<Product> productsBanner = new List<Product>();
+            try
+            {
+                ProductRepository repo = new ProductRepository();
+                productstmp = repo.GetProducts();
+                foreach (var product in productstmp) { if (product.mostrarEnBanner) productsBanner.Add(product); }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            return Ok(productstmp);
         }
 
 

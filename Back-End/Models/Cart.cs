@@ -13,11 +13,14 @@
     {
         public Product product { get; set; }
         public int cantidad { get; set; }
+        public int _newCantidad;
+
 
         public CartItem(Product product, int cantidad)
         {
             this.product = product;
             this.cantidad = cantidad;
+            this._newCantidad = cantidad;
         }
     }
 }

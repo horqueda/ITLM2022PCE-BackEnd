@@ -15,7 +15,10 @@
         public Category category { get; set; }
 
         public bool Destacado { get; set; }
-        public Product(int id, string name, double price, bool destacado)
+
+        public bool mostrarEnBanner { get; set; }
+
+        public Product (int id, string name, double price, bool destacado, bool banner)
         {
             this._originalPrice = price;
             this.Price = price;
@@ -24,6 +27,7 @@
             this.Size = "No Size";
             this.category = new Category();
             this.Destacado = destacado;
+            this.mostrarEnBanner = banner;
         }
 
         public Product()
