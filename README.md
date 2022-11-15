@@ -6,16 +6,14 @@ Repositorio para la clase de portales de comercio electronico.
 
 Ejercicio 1:
 
-Product Controllers.cs Linea 117 
-[HttpPost("AddProductToCart")]
+    Product Controllers.cs Linea 117 
+    [HttpPost("AddProductToCart")]
 
-*Ejercicio 2: 
-Product Controllers.cs Linea 67 
-
-[HttpGet("GetProductsByDestacados")]
+Ejercicio 2: 
+    Product Controllers.cs Linea 67 
+    [HttpGet("GetProductsByDestacados")]
 
 Ejercicio 3:
-Product Controllers.cs Linea 146
-
-[HttpGet("GetProductsInBanner")]
+    Product Controllers.cs Linea 146
+    [HttpGet("GetProductsInBanner")]
 
