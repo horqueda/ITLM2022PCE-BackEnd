@@ -4,13 +4,18 @@ Repositorio para la clase de portales de comercio electronico.
 
 # ITLM2022PCE-BackEnd 
 
-Tarea 1 - Productos Destacados:
+Ejercicio 1:
 
-"Mostrar productos destacados" Definimos una propiedad booleana que nos define si el producto es destacado o no. 
+Product Controllers.cs Linea 117 
+[HttpPost("AddProductToCart")]
 
-"bool Destacado" // bool es true or false
+*Ejercicio 2: 
+Product Controllers.cs Linea 67 
 
-Agregamos un parametro en el constructor : "destacado" que nos permite definir una propiedad interna de la clase dentro del producto. 
+[HttpGet("GetProductsByDestacados")]
 
-Utilizamos 2 listas. Una de productos y una temporal para poder agregar los productos destacados.
+Ejercicio 3:
+Product Controllers.cs Linea 146
+
+[HttpGet("GetProductsInBanner")]
 
