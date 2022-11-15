@@ -9,11 +9,8 @@
         public string Description { get; set; }
         public string UrlImage { get; set; }
         public double Price { get; }
-
         public string Size { get; set; }
-
         public Category category { get; set; }
-
         public bool Destacado { get; set; }
 
         public bool mostrarEnBanner { get; set; }
